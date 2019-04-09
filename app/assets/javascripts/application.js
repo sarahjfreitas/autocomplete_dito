@@ -16,12 +16,12 @@
 //= require_tree .
 $(document).ready(function(){
   $('#teste').select2({
+    minimumInputLength: 2,
     ajax: {
       url: '/events',
       dataType: 'json',
       delay: 200,
       cache: true,
-      minimumInputLength: 3,
       data: function(params){
         return { term: params.term }
       },
