@@ -18,7 +18,7 @@ $(document).ready(function(){
   $('#teste').select2({
     minimumInputLength: 2,
     ajax: {
-      url: '/events',
+      url: 'http://localhost:3001',
       dataType: 'json',
       delay: 200,
       cache: true,
