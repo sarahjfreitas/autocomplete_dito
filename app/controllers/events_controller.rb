@@ -1,6 +1,6 @@
 class EventsController < ApplicationController
   def index
-    if params[:term].present? and params[:term].length >= 3
+    if params[:term].present?
       eventos = Event.where("name like '%#{params[:term]}%'").order('timestamps DESC')
     else 
       eventos = Event.order('timestamps DESC')
